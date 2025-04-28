@@ -124,7 +124,7 @@ Before continuing to implement the full two-activity app, learn how to monitor a
 
 
 
-```
+```kotlin
 
   Log.d("MainActivity", "App started successfully")
 ```
@@ -133,7 +133,7 @@ Also include:
 
 
 
-```
+```kotlin
 
   import android.util.Log
 ```
@@ -145,7 +145,7 @@ Open the **Logcat** tab at the bottom of Android Studio to view logs. Filter by 
 
 
 
-```
+```kotlin
 
   val context = LocalContext.current
 
@@ -168,7 +168,7 @@ You will need to include the following libraries:
 
 
 
-```
+```kotlin
 
   import android.widget.Toast
   import androidx.compose.foundation.layout.Box
@@ -231,7 +231,7 @@ Use `remember` to store and update the user's input text, and use `LocalContext.
 
 
 
-```
+```kotlin
 
   import android.widget.Toast
   import androidx.compose.foundation.layout.Column
@@ -249,7 +249,7 @@ Use `remember` to store and update the user's input text, and use `LocalContext.
 ```
 
 
-```
+```kotlin
 
   val context = LocalContext.current
   var text by remember { mutableStateOf("") }
@@ -287,7 +287,7 @@ Use `remember` to store and update the user's input text, and use `LocalContext.
 
 
 
-```
+```kotlin
 
   val message = intent.getStringExtra("EXTRA\_MESSAGE") ?: "No message received"
 
@@ -361,7 +361,7 @@ Extend `DisplayMessageActivity.kt` to perform additional processing on the messa
 
 **Example Kotlin Snippet**
 
-```
+```kotlin
 
   val words = message?.split(" ") ?: listOf()
   val wordCount = words.size
@@ -409,7 +409,7 @@ Create a new Kotlin class called `WordBundle` that encapsulates a list of words 
 
 **Example Kotlin Snippet**
 
-```
+```kotlin
 
   data class WordBundle(val words: List) {
  val count = words.size
@@ -448,7 +448,7 @@ Move the logic for computing the summary into a top-level function (outside any 
 
 **Example Kotlin Snippet**
 
-```
+```kotlin
 
   fun generateSummary(bundle: WordBundle): String {
       val longWords = bundle.words.filter { it.length > 4 }
@@ -485,7 +485,7 @@ You can replace the original echo message with this richer, processed output.
 
 **Example Kotlin Snippet**
 
-```
+```kotlin
 
   val words = message.split(" ").filter { it.isNotBlank() }
   val bundle = WordBundle(words)
@@ -632,7 +632,7 @@ In your main composable, build the UI using a `Column` that contains:
 
 
 
-```
+```kotlin
 
   val taskList = remember { mutableStateListOf<String>() }
   var text by remember { mutableStateOf("") }
@@ -674,7 +674,7 @@ Instead of just storing strings, create a `Task` data class to represent each ta
 
 
 
-```
+```kotlin
 data class Task(val title: String, val isDone: Boolean = false)
 ```
 
