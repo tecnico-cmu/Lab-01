@@ -1,5 +1,5 @@
 
-# MEIC/METI 2024/2025
+# MEIC/METI 2025/2026
 
 
 # Mobile and Ubiquitous Computing
@@ -22,7 +22,7 @@
 #### Objectives:
 
 
-This first lab introduces students to Android application development using **Android Studio Meerkat (2024.3.1 Patch 2)** and **Kotlin**. By the end of this lab, students should be able to:
+This first lab introduces students to Android application development using **Android Studio Panda 3 (2025.3.3 Patch 1)** and **Kotlin**. By the end of this lab, students should be able to:
 
 
 * Understand the structure of an Android project using Kotlin.
